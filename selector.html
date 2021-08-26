@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ПЭТ проект</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/selector.css">
+</head>
+
+<body>
+    <div>
+        <h1>подчеркнутый заголовок,стилизация по тегу</h1>
+        <h1>его близнец</h1>
+    </div>
+
+    <div>
+        <p class="class">
+            Этот текст стилизован с использованием селектора типа класс
+        </p>
+        <blockquote class="class">
+            На странице может быть несколько классов с одним и тем же классом
+        </blockquote>
+    </div>
+
+    <div>
+        <p class="class class-style">
+            В этот текст добавлен еще один класс
+        </p>
+        <p class="class class-style_too">
+            А в этот еще один
+        </p>
+    </div>
+
+    <div>
+        <p id="ad">
+            Объявление: Этот текст стилизован с использованием селектора типа id
+        </p>
+    </div>
+
+    <div>
+        <p id="idea" class="class">
+            Возможно смешивать id и классы
+        </p>
+        <p id="bad-idea" class="class">
+            При пересечении стилей id и класса, id будет иметь более высокий приоритет ( вне зависимости от порядка
+            объвления в css) - этот цвет фиолетовый вместо синего,и фон стал бледно-розовым
+        </p>
+    </div>
+
+    <input type="text" class="form-input" />
+    <input type="text" class="form-input error" />
+
+    <ul class="menu">
+        <li>
+            <a href="#">Ссылка меню 1</a>
+        </li>
+        <li>
+            <a href="#">Ссылка меню 2</a>
+        </li>
+    </ul>
+
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#">Ссылка меню 1 DIV</a>
+            </li>
+            <li>
+                <a href="#">Ссылка меню 2 DIV</a>
+            </li>
+        </ul>
+    </div>
+
+    <ul>
+        <li>
+            <a href="#">Просто ссылка в списке</a>
+        </li>
+        <li>
+            <a href="#">Просто ссылка в списке2</a>
+        </li>
+    </ul>
+
+    <div>
+        <ul class="menu2">
+            <li>
+                <a href="#">Ссылка про дочерний селектор</a>
+            </li>
+            <li>
+                <a href="#">Ссылка про дочерний селектор</a>
+            </li>
+        </ul>
+    </div>
+
+    <div>
+        <p class="class">
+            Этот текст стилизован с использованием селектора типа класс
+        </p>
+        <h3>А это заголовок</h3>
+        <p class="class">
+            А здесь сработал h3+.class,потому что h3 сверху
+        </p>
+        <h3>Заголовок</h3>
+        <div>
+            <p class="class">
+                Этот текст будет как обычный class=description
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <p class="class">
+            Этот текст стилизован с использованием селектора типа класс
+        </p>
+
+        <p class="class">
+                Сестринский, но h3 + .class не сработает, потому что .class сверху
+        </p>
+
+        <h3>Заголовок</h3>
+
+        <p>
+            Здесь сработал h3+p
+        </p>
+
+        <p class="class">
+            этот текст будет как обычный class="class", потому что он не сестринский для h3,между ними есть p
+        </p>
+
+        <h3>А перед этим текстом тоже есть заголовок</h3>
+        <div>
+            <p class="class">
+                Этот текст будет как обычный class="class",потому что p в диве
+            </p>
+        </div>
+    </div>
+
+    <div>
+        <h1>А перед этим текстом есть заголовок</h1>
+        <p class="class">
+            буквы оранжевые
+        </p>
+        <p class="class">
+            буквы оранжевые,тут необязательна последовательность сразу после h1
+        </p>
+    </div>
+
+    <!-- Группирующий селектор @see 73 main.css -->
+
+    <!-- Селекторы атрибутов -->
+    <div>
+        <h3>это тоже заголовок</h3>
+        <a href="#" data-customer="style">стилизация</a>
+        <a href="#" data-customer="style">через</a>
+        <a href="#" data-customer="style">сочетания</a>
+    </div>
+
+    <input type="tel">
+    <input type="button" value="Кнопка">
+    <input class="button" type="textarea">
+    <input class="button" data-foo="bazz">
+</body>
+</html>

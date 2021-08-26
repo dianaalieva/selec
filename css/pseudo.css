@@ -1,0 +1,73 @@
+a:link {
+    color:green;
+    text-decoration:underline;
+  }
+
+  a:visited {
+    color: purple;
+  }
+
+  a:hover {
+    color:blue;
+    text-decoration: underline;
+  }
+
+  a:active {
+    color: red;
+  }
+
+  a::after{
+    content: "(<->)";
+  }
+  .button{
+    color: #FFF;                
+    background-color: #5995DA;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #5D6063;
+    border-radius: 5px;
+  
+    width: 200px;
+    margin: 20px auto;
+  }
+  .button:link {
+      color: palevioletred;
+  }
+
+  .button:visited {            
+    color: crimson;    
+  }
+  
+  .button:hover {
+    color: olive; 
+  }
+  
+  .button:active {
+    color: darkred; 
+  }
+  
+  .articles p:first-of-type{
+      color: green;
+  }
+
+  .articles p:last-of-type {
+      color:red;
+  }
+  
+  .articles :last-child {
+      text-decoration: underline;
+  }
+  .articles :nth-child(2){
+      color: indigo;
+  } 
+  
+  .article::first-line {
+      background-color: lawngreen;
+  }
+
+  .example::before{
+      content: "!!!!"
+  }
+
+                 
