@@ -1,0 +1,29 @@
+body{
+    font-size: 9px;
+    border: 1px solid red;
+    color: magenta;
+}
+
+#pagewrapper :not(.content) {
+    text-decoration: line-through;
+}
+
+h1{
+    border: inherit;
+    color: initial;
+}
+
+.block{
+  color:initial;  
+}
+
+.content{
+    color:lawngreen;
+    text-decoration: underline;
+    /*font-weight: bolder;*/
+    font-size: 15px;
+}
+
+#pagewrapper{ 
+    font-size: 30px !important;
+}
